@@ -1,7 +1,10 @@
 node {
 
 stage 'checkout'
-git 'https://github.com/Mohamedji/CloudenabledWebApp.git'
+git 'https://github.com/sasiit2008/DevOps-Training.git'
+
+stage 'sonar Analysis'
+sh 'mvn sonar:sonar -Dsonar.projectKey=sasiit2008_DevOps-Training -Dsonar.organization=sasiit2008 -Dsonar.host.url=https://sonarcloud.io
 
 stage 'compile'
 sh 'mvn compile'
